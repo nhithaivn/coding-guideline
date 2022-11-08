@@ -1,10 +1,10 @@
 # CSS
 ## Spacing
-Use space instead of tab. Use 4 spaces for indentation. Spaces are the only way to guarantee code renders the same in any person’s environment.
-Put spaces after : in property declarations.
-Put spaces before { in rule declarations.
-Put line breaks between rulesets.
-When grouping selectors, keep individual selectors to a single line.
+Use space instead of tab. Use 4 spaces for indentation. Spaces are the only way to guarantee code renders the same in any person’s environment.\
+Put spaces after : in property declarations.\
+Put spaces before { in rule declarations.\
+Put line breaks between rulesets.\
+When grouping selectors, keep individual selectors to a single line.\
 Place closing braces of declaration blocks on a new line.
 ```html
 <!-- bad -->
@@ -54,7 +54,7 @@ Avoid specifying units for zero values
 }
 ```
 
-Omit leading “0”s in values.
+Omit leading “0”s in values.\
 Do not use put 0s in front of values or lengths between -1 and 1.
 ```html
 <!-- bad -->
@@ -122,8 +122,8 @@ disabled { ... }
 button.disabled { ... }
 ```
 
-Avoid qualifying ID and class names with type selectors.
-Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.
+Avoid qualifying ID and class names with type selectors.\
+Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.\
 Avoiding unnecessary ancestor selectors is useful for performance reasons.
 ```html
 <!-- bad -->
@@ -135,10 +135,10 @@ div.error {}
 ```
 
 ## Naming convention
-Use ID and class names that are as short as possible but as long as necessary.
+Use ID and class names that are as short as possible but as long as necessary.\
 E.g. #nav not #navigation, .author not .atr
 
-Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
+Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.\
 E.g. .demo-image not .demoimage or .demo_image
 ```html
 <!-- good -->
@@ -158,7 +158,7 @@ Use class names for what the element is for and not how it looks like
 }
 ```
 ## Units
-Unit-less line-height is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the font-size. 
+Unit-less line-height is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the font-size. \
 Avoid use of em. Use rem instead with a fall back of pixel unit
 ```html
 <!-- good -->
@@ -166,8 +166,8 @@ font-size: 32px;
 font-size: 2rem;
 ```
   
-Declaration order
-Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.
+## Declaration order
+Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.\
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 ```html
 <!-- good -->
@@ -235,7 +235,7 @@ Use selector hierarchy instead of flat structure. This created better readabilit
 Avoid nesting more than 4 levels. Also break a block into multiple blocks it exceeds more than 50 lines. A long block that does not fit the screen height can nullify the understandability advantage that nesting of rulesets brings in.
 
   
-Color
+## Color
 Use hex color codes #000 instead of color names. SCSS’ rgba() function is overloaded to accept hex colors as a param, e.g., rgba(#000, .5)
 ```html
 <!-- bad -->
@@ -257,8 +257,8 @@ color: #ebc;
 ```
   
 ## Use SCSS variables 
-Using variables enables consistent styling and more maintainable code.
-It also allows easy switching of themes.
+Using variables enables consistent styling and more maintainable code.\
+It also allows easy switching of themes.\
 Use a separate file to store variables and import it in all scss files as needed.
 _theme.scss:
 ```html
@@ -338,7 +338,7 @@ This will get those styles into both selectors. This is often easier to understa
     color: red;
 }
 ```
-Indentation
+## Indentation
 Avoid indentation of more than 4 levels 
 ```html
 <!-- bad -->
