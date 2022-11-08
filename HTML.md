@@ -13,19 +13,11 @@ Always define which language the page is written in.
 <html lang="en">
 ```
 ## Encoding
-Use UTF-8 (no BOM).
-Make sure your editor uses UTF-8 as character encoding, without a byte order mark.
-Specify the encoding in HTML templates and documents via `<meta charset="utf-8">`
-
-## IE Edge case
-Use IE edge mode in meta tag
+Always define the character encoding. The encoding should be defined as early as possible. Make sure your editor uses UTF-8 as character encoding, without a byte order mark (UTF-8, no BOM). Do not specify the encoding of style sheets as these assume UTF-8
 ```html
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
 ```
-If this is note used, IE can use compatibility mode and render the page using an older version of IE such as IE7. Place this immediately after <title> tag
-
-
-## Omit Protocol
+## Protocol
 Omit the protocol portion (http:, https:) from URLs pointing to images and other media files, style sheets, and scripts unless the respective files are not available over both protocols.
 Omitting the protocol—which makes the URL relative—prevents mixed content issues and results in minor file size savings.
 
@@ -35,6 +27,12 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 <!-- good -->
 <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 ```
+## IE Edge case
+Use IE edge mode in meta tag
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+```
+If this is note used, IE can use compatibility mode and render the page using an older version of IE such as IE7. Place this immediately after <title> tag
 
 ## Semantics
 Use html tag which are semantic to its purpose
@@ -44,7 +42,6 @@ Use html tag which are semantic to its purpose
 <!-- good -->
 <header></header>
 ```
-
 ## Accessibility
 Use alt tag to specify the purpose of media files (image, audio, video) so that on browsers (or screen readers) where the media does not play or takes time to render, the user can figure out the purpose of the content:
 ```html
@@ -57,6 +54,12 @@ Use alt tag to specify the purpose of media files (image, audio, video) so that 
 ## Spacing
 Use space instead tabs. Indent using 4 spaces.
 ```html
+<!-- bad -->
+<ul>
+  <li>Fantastic</li>
+  <li>Great</li>
+</ul>
+<!-- good -->
 <ul>
     <li>Fantastic
     <li>Great
@@ -98,10 +101,10 @@ d used should be unique across the page. Id, if present, should be the first att
 ## Trailing Whitespaces
 Remove trailing white spaces.
 Trailing white spaces are unnecessary and can complicate diffs.
-```htmml
-<!-- Bad -->
+```html
+<!-- bad -->
 <p>No, thank you. </p>
-<!-- Good -->
+<!-- good -->
 <p>Yes please.</p>
 
 ```
@@ -210,8 +213,9 @@ When quoting attributes values, use double quotation marks.
  <!-- good -->
 <a class="maia-button maia-button-secondary">Sign in</a>
 ```
-## Tools
+##  Markup validation Tools
 [w3 Validator](https://validator.w3.org/)
+[csslint](http://csslint.net/)
 ## Resources
 [CodeGuide](https://codeguide.co/)
 [Google HTML & CSS Guide](https://google.github.io/styleguide/htmlcssguide.html)
