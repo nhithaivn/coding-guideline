@@ -114,7 +114,7 @@ If using scss-lint to validate the file, use disabled comment to ignore rule to 
 }
 // scss-lint:enable IdSelector SelectorFormat
 ```
-The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class.
+The class names `disabled`, `mousedown`, `danger`, `hover`, `selected`, and `active` should always be namespaced by a class.
 ```html
 <!-- bad -->
 disabled { ... }
