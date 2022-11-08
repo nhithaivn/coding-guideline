@@ -1,7 +1,7 @@
 
-# HTML
-Most of the guidelines mentioned here adhere to Google Coding standards for HTML and CSS. Wherever needed we have modified the rules to suit our needs. This document contains generic CSS guideline as well as some specific SCSS guidelines.
+Most of the guidelines mentioned here adhere to [Google Coding](https://google.github.io/styleguide/htmlcssguide.html) standards for HTML and CSS. Wherever needed we have modified the rules to suit our needs. This document contains generic CSS guideline as well as some specific SCSS guidelines.
 
+# General
 ## Document Type
 Use Html5
 ```html
@@ -24,8 +24,7 @@ Use IE edge mode in meta tag
 ```
 If this is note used, IE can use compatibility mode and render the page using an older version of IE such as IE7. Place this immediately after <title> tag
 
-
-## Omit Protocol
+## Protocol
 Omit the protocol portion (http:, https:) from URLs pointing to images and other media files, style sheets, and scripts unless the respective files are not available over both protocols.
 Omitting the protocol—which makes the URL relative—prevents mixed content issues and results in minor file size savings.
 
@@ -36,6 +35,23 @@ Omitting the protocol—which makes the URL relative—prevents mixed content is
 <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
 ```
 
+## Type attribute
+Omit type attributes for style sheets and scripts.
+Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).
+Specifying type attributes in these contexts is not necessary as HTML5 implies text/css and text/javascript as defaults. This can be safely done even for older browsers.
+
+```html
+<!-- bad -->
+<link rel="stylesheet" href="//www.google.com/css/maia.css" type="text/css">
+ <!-- good -->
+<link rel="stylesheet" href="//www.google.com/css/maia.css">
+
+ <!-- bad -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"
+  type="text/javascript"></script>
+ <!-- good -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+```
 ## Semantics
 Use html tag which are semantic to its purpose
 ```html
@@ -53,6 +69,14 @@ Use alt tag to specify the purpose of media files (image, audio, video) so that 
 <!-- good -->
 <img src="spreadsheet.png" alt="Spreadsheet screenshot.">
 ```
+# Formatting
+## General Formatting
+Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
+Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
+Every form input that has text attached should utilize a `<label>` tag. Especially radio or checkbox elements.
+Even though quotes around attributes is optional, always put quotes around attributes for readability. 
+Avoid trailing slashes in self-closing elements. For example,` <br>`, `<hr>`, `<img>`, and `<input>`.
+Don’t set tabindex manually—rely on the browser to set the order. 
 
 ## Spacing
 Use space instead tabs. Indent using 4 spaces.
@@ -86,7 +110,7 @@ Prefix custom attribute with “data-“
 ```html
 data-my-attr
 ```
-d used should be unique across the page. Id, if present, should be the first attribute of an element followed by class (if present)
+Id used should be unique across the page. Id, if present, should be the first attribute of an element followed by class (if present)
 ```html
 <!-- bad -->
 <input maxlength="20" id="email" type="email" class="login-box">
@@ -98,15 +122,15 @@ d used should be unique across the page. Id, if present, should be the first att
 ## Trailing Whitespaces
 Remove trailing white spaces.
 Trailing white spaces are unnecessary and can complicate diffs.
+```html
 
-## General Formatting
-Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
-Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
-Every form input that has text attached should utilize a `<label>` tag. Especially radio or checkbox elements.
-Even though quotes around attributes is optional, always put quotes around attributes for readability. 
-Avoid trailing slashes in self-closing elements. For example,` <br>`, `<hr>`, `<img>`, and `<input>`.
-Don’t set tabindex manually—rely on the browser to set the order. 
+<!-- Bad -->
+<p>No, thank you. </p>
 
+<!-- Good -->
+<p>Yes please.</p>
+
+```
 ## Lean markup
 Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. For example:
 ```html
@@ -177,23 +201,6 @@ Avoid inline styling and scripting in HTML tag.
 ```
 CSS, HTML, JS can be kept in the same file if it’s a component (like Web Components). Otherwise keep them in separate files so that they can be minimized. 
 
-## Type attribute
-Omit type attributes for style sheets and scripts.
-Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).
-Specifying type attributes in these contexts is not necessary as HTML5 implies text/css and text/javascript as defaults. This can be safely done even for older browsers.
-
-```html
-<!-- bad -->
-<link rel="stylesheet" href="//www.google.com/css/maia.css" type="text/css">
- <!-- good -->
-<link rel="stylesheet" href="//www.google.com/css/maia.css">
-
- <!-- bad -->
-<script src="//www.google.com/js/gweb/analytics/autotrack.js"
-  type="text/javascript"></script>
- <!-- good -->
-<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
-```
 
 ## Quotation mark
 
@@ -204,3 +211,10 @@ When quoting attributes values, use double quotation marks.
  <!-- good -->
 <a class="maia-button maia-button-secondary">Sign in</a>
 ```
+# Tools
+[w3 Validator](https://validator.w3.org/)
+# Resources
+[CodeGuide](https://codeguide.co/)
+[Google HTML & CSS Guide](https://google.github.io/styleguide/htmlcssguide.html)
+[w3school](https://www.w3schools.com/html/html5_syntax.asp)
+[HTML Best Practices](https://github.com/hail2u/html-best-practices)
