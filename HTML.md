@@ -98,7 +98,13 @@ d used should be unique across the page. Id, if present, should be the first att
 ## Trailing Whitespaces
 Remove trailing white spaces.
 Trailing white spaces are unnecessary and can complicate diffs.
+```htmml
+<!-- Bad -->
+<p>No, thank you. </p>
+<!-- Good -->
+<p>Yes please.</p>
 
+```
 ## General Formatting
 Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
 Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
@@ -204,3 +210,10 @@ When quoting attributes values, use double quotation marks.
  <!-- good -->
 <a class="maia-button maia-button-secondary">Sign in</a>
 ```
+## Tools
+[w3 Validator](https://validator.w3.org/)
+## Resources
+[CodeGuide](https://codeguide.co/)
+[Google HTML & CSS Guide](https://google.github.io/styleguide/htmlcssguide.html)
+[w3school](https://www.w3schools.com/html/html5_syntax.asp)
+[HTML Best Practices](https://github.com/hail2u/html-best-practices)
