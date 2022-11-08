@@ -214,10 +214,10 @@ When quoting attributes values, use double quotation marks.
 <a class="maia-button maia-button-secondary">Sign in</a>
 ```
 ##  Markup validation Tools
-[w3 Validator](https://validator.w3.org/)
-[csslint](http://csslint.net/)
+[w3 Validator](https://validator.w3.org/) \
+[csslint](http://csslint.net/) 
 ## Resources
-[CodeGuide](https://codeguide.co/)
-[Google HTML & CSS Guide](https://google.github.io/styleguide/htmlcssguide.html)
-[w3school](https://www.w3schools.com/html/html5_syntax.asp)
-[HTML Best Practices](https://github.com/hail2u/html-best-practices)
+[CodeGuide](https://codeguide.co/) \
+[Google HTML & CSS Guide](https://google.github.io/styleguide/htmlcssguide.html) \
+[w3school](https://www.w3schools.com/html/html5_syntax.asp) \
+[HTML Best Practices](https://github.com/hail2u/html-best-practices) 
