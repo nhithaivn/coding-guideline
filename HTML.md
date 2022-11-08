@@ -18,7 +18,7 @@ Always define the character encoding. The encoding should be defined as early as
 <meta charset="utf-8">
 ```
 ## Protocol
-Omit the protocol portion (http:, https:) from URLs pointing to images and other media files, style sheets, and scripts unless the respective files are not available over both protocols.
+Omit the protocol portion (http:, https:) from URLs pointing to images and other media files, style sheets, and scripts unless the respective files are not available over both protocols.\
 Omitting the protocol—which makes the URL relative—prevents mixed content issues and results in minor file size savings.
 
 ```html
@@ -89,7 +89,7 @@ Prefix custom attribute with “data-“
 ```html
 data-my-attr
 ```
-d used should be unique across the page. Id, if present, should be the first attribute of an element followed by class (if present)
+Id used should be unique across the page. Id, if present, should be the first attribute of an element followed by class (if present)
 ```html
 <!-- bad -->
 <input maxlength="20" id="email" type="email" class="login-box">
@@ -111,7 +111,7 @@ Trailing white spaces are unnecessary and can complicate diffs.
 ## General Formatting
 Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
 Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
-Every form input that has text attached should utilize a `<label>` tag. Especially radio or checkbox elements.
+Every form input that has text attached should utilize a `<label>` tag. Especially radio or checkbox elements.\
 Even though quotes around attributes is optional, always put quotes around attributes for readability. 
 Avoid trailing slashes in self-closing elements. For example,` <br>`, `<hr>`, `<img>`, and `<input>`.
 Don’t set tabindex manually—rely on the browser to set the order. 
@@ -187,8 +187,8 @@ Avoid inline styling and scripting in HTML tag.
 CSS, HTML, JS can be kept in the same file if it’s a component (like Web Components). Otherwise keep them in separate files so that they can be minimized. 
 
 ## Type attribute
-Omit type attributes for style sheets and scripts.
-Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).
+Omit type attributes for style sheets and scripts.\
+Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).\
 Specifying type attributes in these contexts is not necessary as HTML5 implies text/css and text/javascript as defaults. This can be safely done even for older browsers.
 
 ```html
